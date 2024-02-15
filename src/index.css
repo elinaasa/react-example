@@ -1,22 +1,49 @@
 :root {
-  font-family: system-ui, sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--cinnabar);
+  background-color: var(--antique-white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --coffee: #774D36ff;
+  --antique-white: #F3E7D7ff;
+  --ecru: #C7B566ff;
+  --cinnabar: #EE583Fff;
+  --lavender-pink: #F7B3CCff;
+  --gamboge: #F3A532ff;
+  --dark-sienna: #3C2F2Fff;
 }
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-family: "Old Standard TT-bold", serif;
+  color: var(--dark-sienna);
+  font-size: 2.5rem;
+  font-weight: 800;
+  min-width: 200px;
 }
 
 /* nav */
@@ -25,21 +52,38 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 nav a {
-  display: block;
-  color: white;
+  display: inline-block;
+  position: relative;
+  color: var(--dark-sienna);
   text-align: center;
   padding: 1rem;
   text-decoration: none;
 }
 
-nav a:hover {
-  background-color: #111111;
+nav a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: var(--cinnabar);
+  bottom: 10%;
+  border-radius: 50px;
+  transition: .3s all 0.025s;
+}
+
+nav a::after {
+  left: 0;
+  right: 100%;
+}
+
+nav a:hover::after {
+  left: 0;
+  right: 0;
 }
 
 /* media item card */
@@ -51,11 +95,6 @@ td img {
   width: 260px;
   height: 200px;
   object-fit: cover;
-}
-
-td button:hover,
-a:hover {
-  background-color: #111111;
 }
 
 td a {
@@ -130,4 +169,12 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
 }
