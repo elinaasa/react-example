@@ -18,7 +18,7 @@
   --cinnabar: #EE583Fff;
   --lavender-pink: #F7B3CCff;
   --gamboge: #F3A532ff;
-  --dark-sienna: #3C2F2Fff;
+  --dark-sienna: rgb(75, 57, 57);
 }
 
 #root {
@@ -89,11 +89,12 @@ nav a:hover::after {
 /* media item card */
 td {
   padding: 1rem;
+
 }
 
 td img {
-  width: 260px;
-  height: 200px;
+  width: 660px;
+  height: 660px;
   object-fit: cover;
 }
 
@@ -104,6 +105,19 @@ td a {
   color: white;
   border: none;
   padding: 0.5rem;
+}
+
+.media-row {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: var(--cinnabar) 1px double;
+}
+
+.media-row h2 {
+  color: var(--cinnabar);
+  margin-bottom: 10px;
 }
 
 /* media item dialog */
