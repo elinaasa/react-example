@@ -12,7 +12,7 @@ const MediaRow = (props: {
         <h2>{item.username}</h2>
         <img src={item.thumbnail} alt={item.title} />
       </td>
-      <td>{item.title}</td>
+      <h3>{item.title}</h3>
       <td>{item.description}</td>
       <td>{new Date(item.created_at).toLocaleString('fi-FI')}</td>
       <td>

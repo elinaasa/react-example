@@ -35,9 +35,6 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>
-        <p>Copyright 2024 - NN</p>
-      </footer>
     </>
   );
 };
