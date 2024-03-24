@@ -1,5 +1,5 @@
 
-https://users.metropolia.fi/~elinaasa/my-app/profile
+https://users.metropolia.fi/~elinaasa/my-app/
 
 - etusivulta poistettu osa median tiedoista, kuvan kokoa muutettu ja muutettu layouttia selkeämmäksi
 - css muokkaukset
